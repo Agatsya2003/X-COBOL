@@ -1,0 +1,59 @@
+       
+       fd   pd05000.
+       
+       01   f05000-mestre-Invoice_Seikyusho.
+            03 f05000-chave.
+               05 f05000-CompanyCode                pic 9(03).
+               05 f05000-BranchCode                 pic 9(04).
+               05 f05000-Type-nota                 pic 9(02).
+                  88 f05000-nota-entrada               value 00.
+                  88 f05000-nota-Exit_Deguchi                 value 01.
+               05 f05000-Number-documento          pic 9(09).
+               05 f05000-Series-documento           pic x(03).
+               05 f05000-cd-destinatario           pic 9(09). 
+               05 f05000-Seq                 pic 9(09).
+             03 f05000-data-operacao               pic 9(08).
+             03 filler redefines f05000-data-operacao.
+                05 f05000-ano-operacao             pic 9(04).
+                05 f05000-mes-operacao             pic 9(02).
+                05 f05000-dia-operacao             pic 9(02).
+             03 f05000-horario-operacao            pic 9(06).
+             03 filler redefines f05000-horario-operacao.
+                05 f05000-Time-operacao            pic 9(02).
+                05 f05000-minuto-operacao          pic 9(02).
+                05 f05000-segundos-operacao        pic 9(02).
+             03 f05000-UserID-operacao         pic 9(11).
+             03 f05000-data-Exit_Deguchi                  pic 9(08).
+             03 filler redefines f05000-data-Exit_Deguchi.
+                05 f05000-ano-Exit_Deguchi                pic 9(04).
+                05 f05000-mes-Exit_Deguchi                pic 9(02).
+                05 f05000-dia-Exit_Deguchi                pic 9(02).
+             03 f05000-horario-Exit_Deguchi               pic 9(06).
+             03 filler redefines f05000-horario-Exit_Deguchi.
+                05 f05000-Time-Exit_Deguchi               pic 9(02).
+                05 f05000-minuto-Exit_Deguchi             pic 9(02).
+                05 f05000-segundos-Exit_Deguchi           pic 9(02).
+             03 f05000-data-entrega                pic 9(08).
+             03 filler redefines f05000-data-entrega.
+                05 f05000-ano-entrega              pic 9(04).
+                05 f05000-mes-entrega              pic 9(02).
+                05 f05000-dia-entrega              pic 9(02).
+             03 f05000-horario-entrega             pic 9(06).
+             03 filler redefines f05000-horario-entrega.
+                05 f05000-Time-entrega             pic 9(02).
+                05 f05000-minuto-entrega           pic 9(02).
+                05 f05000-segundos-entrega         pic 9(02).
+             03 f05000-base-icms                   pic 9(09)v9(02).
+             03 f05000-Value-icms                  pic 9(09)v9(02).
+             03 f05000-base-icms-st                pic 9(09)v9(02).
+             03 f05000-Value-icms-st               pic 9(09)v9(02).
+             03 f05000-Value-importacao            pic 9(09)v9(02).
+             03 f05000-Value-pis                   pic 9(09)v9(02).
+             03 f05000-Value-total-produtos        pic 9(09)v9(02).
+             03 f05000-Value-frete                 pic 9(09)v9(02).
+             03 f05000-Value-seguro                pic 9(09)v9(02).
+             03 f05000-Value-desconto              pic 9(09)v9(02).
+             03 f05000-Value-outras-despesas       pic 9(09)v9(02).
+             03 f05000-Value-ipi                   pic 9(09)v9(02).
+             03 f05000-Value-cofins                pic 9(09)v9(02).
+             03 f05000-Value-total                 pic 9(09)v9(02).
